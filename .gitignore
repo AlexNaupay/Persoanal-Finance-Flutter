@@ -48,3 +48,5 @@ android/app/.cxx/
 pubspec.lock
 
 lib/generated
+**/DerivedData
+ios/build
