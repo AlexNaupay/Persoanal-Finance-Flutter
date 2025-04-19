@@ -50,3 +50,8 @@ pubspec.lock
 lib/generated
 **/DerivedData
 ios/build
+
+# Firebase
+ios/GoogleService-Info.plist
+android/app/google-services.json
+lib/firebase_options.dart

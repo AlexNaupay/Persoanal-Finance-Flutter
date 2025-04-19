@@ -1,7 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:personal_finance_flutter/app_router.dart';
 import 'package:personal_finance_flutter/app_theme.dart';
+import 'package:personal_finance_flutter/auth/auth_bloc.dart';
+import 'package:personal_finance_flutter/auth/auth_repository.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -12,12 +19,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isDarkMode = MediaQuery.of(context).platformBrightness == Brightness.dark;
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.greenFinanceTheme,
-      darkTheme: AppTheme.greenFinanceDarkTheme,
-      themeMode: isDarkMode? ThemeMode.dark : ThemeMode.light,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return RepositoryProvider<AuthRepository>(
+      create: (context) => AuthRepository(),
+      child: BlocProvider<AuthBloc>(
+        create: (context) => AuthBloc(authRepository: RepositoryProvider.of<AuthRepository>(context)),
+        child: Builder(builder: (context){
+          return MaterialApp.router(
+            title: 'Flutter Demo',
+            theme: AppTheme.greenFinanceTheme,
+            darkTheme: AppTheme.greenFinanceDarkTheme,
+            themeMode: isDarkMode? ThemeMode.dark : ThemeMode.light,
+            routerConfig: AppRouter.router,
+          );
+        }),
+      ),
     );
   }
 }

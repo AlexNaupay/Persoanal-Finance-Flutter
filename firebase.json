@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "personal-finance-8b966",
+          "appId": "1:15419325355:android:845c19fa6ebe3c7fba30ee",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "personal-finance-8b966",
+          "appId": "1:15419325355:ios:7b19ba7783793c6bba30ee",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "personal-finance-8b966",
+          "configurations": {
+            "android": "1:15419325355:android:845c19fa6ebe3c7fba30ee",
+            "ios": "1:15419325355:ios:7b19ba7783793c6bba30ee"
+          }
+        }
+      }
+    }
+  }
+}
