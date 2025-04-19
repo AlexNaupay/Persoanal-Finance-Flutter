@@ -6,9 +6,14 @@ import 'package:personal_finance_flutter/app_theme.dart';
 import 'package:personal_finance_flutter/auth/auth_bloc.dart';
 import 'package:personal_finance_flutter/auth/auth_repository.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  // Firebase.initializeApp();
+  await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(const MyApp());
 }
 
