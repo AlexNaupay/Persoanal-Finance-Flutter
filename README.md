@@ -36,5 +36,13 @@ flutterfire configure  # If any error occurred with flutterfire configure
 # Set values in 
 #   android/local.properties
 #   or android/app/build.gradle.kts
+```
 
+## Reinitialize Flutter iOS Setup
+
+```bash
+rm -rf ios/Podfile ios/Podfile.lock ios/Pods
+flutter create --platforms ios .
+cd ios
+pod install
 ```
