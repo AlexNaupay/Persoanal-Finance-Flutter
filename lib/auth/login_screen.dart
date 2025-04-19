@@ -61,7 +61,7 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 16),
           PasswordField(controller: _passwordController),
           const SizedBox(height: 24),
-          ElevatedButton(onPressed: () => _signIn, child: const Text('Iniciar Sesion')),
+          ElevatedButton(onPressed: () => _signIn(), child: const Text('Iniciar Sesion')),
         ],
       ),
     );
@@ -103,7 +103,7 @@ class EmailField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      decoration: const InputDecoration(labelText: 'Correo', prefixIcon: Icon(Icons.email)),
+      decoration: const InputDecoration(labelText: 'Email', prefixIcon: Icon(Icons.email)),
       keyboardType: TextInputType.emailAddress,
       validator: Validator.validateEmail,
     );
@@ -119,7 +119,7 @@ class PasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      decoration: const InputDecoration(labelText: 'Contrasena', prefixIcon: Icon(Icons.lock)),
+      decoration: const InputDecoration(labelText: 'Password', prefixIcon: Icon(Icons.lock)),
       obscureText: true,
       keyboardType: TextInputType.emailAddress,
       validator: Validator.validatePassword,

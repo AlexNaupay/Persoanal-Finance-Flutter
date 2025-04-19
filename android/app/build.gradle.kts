@@ -10,8 +10,10 @@ plugins {
 
 android {
     namespace = "io.devlabs.personal_finance_flutter"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    //compileSdk = flutter.compileSdkVersion
+    //ndkVersion = flutter.ndkVersion
+    compileSdk = 35
+    ndkVersion = "28.0.13004108"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -27,8 +29,10 @@ android {
         applicationId = "io.devlabs.personal_finance_flutter"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        //minSdk = flutter.minSdkVersion
+        //targetSdk = flutter.targetSdkVersion
+        minSdk = 25
+        targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }

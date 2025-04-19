@@ -30,4 +30,11 @@ flutter pub add firebase_core
 # gem install xcodeproj
 flutterfire configure
 flutterfire configure  # If any error occurred with flutterfire configure
+
+
+# https://developer.android.com/ndk/downloads
+# Set values in 
+#   android/local.properties
+#   or android/app/build.gradle.kts
+
 ```
