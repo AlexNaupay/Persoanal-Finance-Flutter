@@ -16,6 +16,8 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
+## Project's Notes
+- Business Logic Component : Bloc Architecture 
 
 
 ```bash
@@ -29,7 +31,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 flutter pub add firebase_core
 # gem install xcodeproj
 flutterfire configure
-flutterfire configure  # If any error occurred with flutterfire configure
+flutterfire reconfigure  # If any error occurred with flutterfire configure
 
 
 # https://developer.android.com/ndk/downloads
@@ -45,4 +47,7 @@ rm -rf ios/Podfile ios/Podfile.lock ios/Pods
 flutter create --platforms ios .
 cd ios
 pod install
+
+# open ios/Runner.xcworkspace/
+
 ```
