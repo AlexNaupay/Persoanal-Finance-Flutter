@@ -31,6 +31,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 flutter pub add firebase_core
 # gem install xcodeproj
 flutterfire configure
+flutterfire configure --project=<project-id>  # lib/firebase_options.dart 
 flutterfire reconfigure  # If any error occurred with flutterfire configure
 
 
@@ -49,5 +50,4 @@ cd ios
 pod install
 
 # open ios/Runner.xcworkspace/
-
 ```
